@@ -156,7 +156,7 @@ plt.show()
 
 cap = cv2.VideoCapture(0)
 if not cap.isOpened():
-    print("❌ Cannot open webcam")
+    print("Cannot open webcam")
     exit()
 
 engine = pyttsx3.init()
@@ -170,7 +170,7 @@ try:
     while True:
         ret, frame = cap.read()
         if not ret:
-            print("❌ Failed to grab frame")
+            print("Failed to grab frame")
             break
 
         # Histogram Equalization for better contrast
@@ -211,11 +211,11 @@ try:
 
         # Quit on 'q' key press
         if cv2.waitKey(1) & 0xFF == ord('q'):
-            print("🛑 Quitting webcam...")
+            print("Quitting webcam...")
             break
 
 except KeyboardInterrupt:
-    print("🛑 Detection stopped by user")
+    print("Detection stopped by user")
 
 finally:
     cap.release()
@@ -231,7 +231,7 @@ from IPython.display import Video, display
 def process_and_display_video_live(input_path):
     cap = cv2.VideoCapture(input_path)
     if not cap.isOpened():
-        print(f"❌ Could not open video file: {input_path}")
+        print(f"Could not open video file: {input_path}")
         return
     
     try:
@@ -268,7 +268,7 @@ def process_and_display_video_live(input_path):
             time.sleep(0.03)  # ~30 FPS display speed
         
     except KeyboardInterrupt:
-        print("🛑 Video processing stopped by user")
+        print(" Video processing stopped by user")
 
     cap.release()
     print("✅ Video processing finished")
@@ -287,7 +287,7 @@ ret, frame = cap.read()
 cap.release()
 
 if not ret:
-    print("❌ Failed to read frame")
+    print(" Failed to read frame")
 else:
     # Run your model on this frame
     results = model(frame)
