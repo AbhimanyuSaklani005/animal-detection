@@ -1,0 +1,23 @@
+names:
+- Bear
+- Buffalo
+- Camel
+- Cat
+- Cow
+- Deer
+- Dog
+- Donkey
+- Elephant
+- Leopard
+- Lion
+- Tiger
+nc: 12
+roboflow:
+  license: Public Domain
+  project: animal-detection-9dl1v
+  url: https://universe.roboflow.com/realtime-wildlife-detection-and-alert-system-for-railway-tracks-animal-dataset/animal-detection-9dl1v/dataset/1
+  version: 1
+  workspace: realtime-wildlife-detection-and-alert-system-for-railway-tracks-animal-dataset
+test: ../test/images
+train: ../train/images
+val: ../valid/images
